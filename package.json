@@ -1,0 +1,17 @@
+{
+  "name": "desafio-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open --e2e -b electron"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.11.0",
+    "cypress-xpath": "^2.0.1",
+    "xpath": "^0.0.33"
+  }
+}
