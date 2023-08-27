@@ -26,12 +26,12 @@ describe('desafio 3', ()=>{
         productPage.agregarProducto(datosProductos.producto2.nombre);
         productPage.confirmarProducto();
         cy.get('#goShoppingCart').click();
-        shoppingCartPage.verificarNombreProducto(datosProductos.producto1.nombre).should('have.text',datosProductos.producto1.nombre);
-        shoppingCartPage.verificarPrecioProducto(datosProductos.producto1.precio).should('have.text','$'+ datosProductos.producto1.precio);
-        shoppingCartPage.verificarNombreProducto(datosProductos.producto2.nombre).should('have.text',datosProductos.producto2.nombre);
-        shoppingCartPage.verificarPrecioProducto(datosProductos.producto2.precio).should('have.text','$'+ datosProductos.producto2.precio);
+        shoppingCartPage.verificarNombreProducto(datosProductos.producto1.nombre);
+        shoppingCartPage.verificarPrecioProducto(datosProductos.producto1.precio);
+        shoppingCartPage.verificarNombreProducto(datosProductos.producto2.nombre);
+        shoppingCartPage.verificarPrecioProducto(datosProductos.producto2.precio);
         cy.xpath('//button[text()="Show total price"]').click();
-        shoppingCartPage.verificarPrecioAcumulado(datosProductos.producto1.precio + datosProductos.producto2.precio);
+        shoppingCartPage.verificarPrecioAcumulado(datosProductos.producto1.precio, datosProductos.producto2.precio);
     })
     
 })
