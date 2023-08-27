@@ -6,13 +6,13 @@ export class ShoppingCartPage{
     }
 
     verificarNombreProducto(nombreProducto){
-        cy.get(this.productName).contains(nombreProducto).should('have.text',nombreProducto);
+       return cy.get(this.productName).contains(nombreProducto);
     }
     verificarPrecioProducto(precioProducto){
-        cy.get(this.productPrice).contains(precioProducto).should('have.text','$'+ precioProducto);
+       return cy.get(this.productPrice).contains(precioProducto);
     }
-    verificarPrecioAcumulado(precio1, precio2){
-        cy.get(this.price).contains(precio1+precio2);
+    verificarPrecioAcumulado(precioTotal){
+        cy.get(this.price).contains(precioTotal);
     }
 }
 
